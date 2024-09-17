@@ -23,7 +23,6 @@ const authService = {
 
     // Si la respuesta no es satisfactoria (código diferente de 200-299), lanza un error
     if (!response.ok) {
-      console.error('Unknown error', data);
       throw new Error(data.message);
     }
 

@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useMemo, useState} from 'react';
+import React, {createContext, FC, useContext, useMemo, useState} from 'react';
 import authService from '../services/authService';
 
 // Definición de las propiedades que tendrá el contexto de autenticación
@@ -28,7 +28,7 @@ export const useAuth = () => {
 };
 
 // Componente proveedor de autenticación
-export const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
+export const AuthProvider: FC<AuthProviderProps> = ({children}) => {
   const [token, setToken] = useState<string | null>(null); // Estado para almacenar el token de autenticación
 
   // Función para iniciar sesión
@@ -37,7 +37,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
       const receivedToken = await authService.login(email, password); // Llama al servicio de autenticación para obtener el token
       setToken(receivedToken); // Guarda el token recibido en el estado
     } catch (error: any) {
-      console.error('Error al intentar identificarse', error); // Imprime el error en la consola
+      console.error('Error logging in', error); // Imprime el error en la consola
       throw error; // Lanza el error para que sea manejado por el componente que llama a esta función
     }
   };
