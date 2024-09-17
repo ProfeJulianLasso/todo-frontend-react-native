@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, ReactNode} from 'react';
 import {Modal, Text, TouchableOpacity, View} from 'react-native';
 import {modalStyle} from './ModalStyle';
 
@@ -7,7 +7,7 @@ interface ModalComponentProps {
   visible: boolean; // Indica si el modal debe ser visible
   onRequestClose: () => void; // Función que se ejecuta al cerrar el modal
   title: string; // Título del modal
-  children: React.ReactNode; // Contenido que se mostrará dentro del modal
+  children: ReactNode; // Contenido que se mostrará dentro del modal
   actions: Array<{label: string; onPress: () => void}>; // Acciones (botones) que se mostrarán en el modal
 }
 

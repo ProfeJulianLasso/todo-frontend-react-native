@@ -1,6 +1,6 @@
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import CompletedScreen from '../screens/Completed';
 import InProgressScreen from '../screens/InProgress';
@@ -17,7 +17,7 @@ export type TabParamList = {
 
 const Tab = createMaterialTopTabNavigator<TabParamList>(); // Crea el navegador de pestañas
 
-const TabNavigator = (): React.ReactElement => {
+const TabNavigator = (): ReactElement => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>(); // Hook para la navegación
 
   return (

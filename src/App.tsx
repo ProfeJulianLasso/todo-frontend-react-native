@@ -1,12 +1,12 @@
 import {NavigationContainer} from '@react-navigation/native';
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {SafeAreaView} from 'react-native';
 import {appStyle} from './AppStyle';
 import {AuthProvider} from './context/AuthContext';
 import RootNavigator from './navigation/RootNavigator';
 
 // Componente principal de la aplicación
-const App = (): React.ReactElement => {
+const App = (): ReactElement => {
   return (
     // Proveedor de autenticación para gestionar el estado de login/logout en toda la app
     <AuthProvider>

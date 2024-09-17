@@ -1,4 +1,11 @@
-import React, {createContext, FC, useContext, useMemo, useState} from 'react';
+import React, {
+  createContext,
+  FC,
+  ReactNode,
+  useContext,
+  useMemo,
+  useState,
+} from 'react';
 import authService from '../services/authService';
 
 // Definición de las propiedades que tendrá el contexto de autenticación
@@ -11,7 +18,7 @@ interface AuthContextProps {
 
 // Definición de las propiedades que tendrá el proveedor de autenticación
 interface AuthProviderProps {
-  children: React.ReactNode; // Los componentes hijos que estarán dentro del proveedor
+  children: ReactNode; // Los componentes hijos que estarán dentro del proveedor
 }
 
 // Creación del contexto de autenticación

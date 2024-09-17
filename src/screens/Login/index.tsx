@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {View} from 'react-native';
 import ButtonComponent from '../../components/Button';
 import ErrorMessageComponent from '../../components/ErrorMessage';
@@ -9,7 +9,7 @@ import {loginStyle} from './LoginStyle';
 import {useLoginHook} from './useLoginHook';
 
 // Componente de pantalla de inicio de sesión
-const LoginScreen = (): React.ReactElement => {
+const LoginScreen = (): ReactElement => {
   // Hook para manejar la lógica de inicio de sesión
   const {
     email,
