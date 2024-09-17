@@ -32,7 +32,8 @@ const ModalComponent: FC<ModalComponentProps> = ({
           {/* Contenedor principal del modal */}
           <Text style={modalStyle.modalTitle}>{title}</Text>
           {/* Título del modal */}
-          <View>{children}</View> {/* Contenido adicional del modal */}
+          <View>{children}</View>
+          {/* Contenido adicional del modal */}
           {actions.map(
             (
               action,
