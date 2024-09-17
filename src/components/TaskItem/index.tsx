@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, {FC} from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 import {taskItemStyle} from './TaskItemStyle';
 
@@ -22,7 +22,8 @@ const TaskItemComponent: FC<TaskItemComponentProps> = ({
       {/* Estilo del contenedor de la tarea */}
       <Text style={taskItemStyle.taskTitle}>{title}</Text>
       {/* Muestra el título de la tarea */}
-      <Text>{description}</Text> {/* Muestra la descripción de la tarea */}
+      <Text>{description}</Text>
+      {/* Muestra la descripción de la tarea */}
     </TouchableOpacity>
   );
 };

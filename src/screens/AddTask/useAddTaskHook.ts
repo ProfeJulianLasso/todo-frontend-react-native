@@ -14,7 +14,7 @@ export const useAddTaskHook = () => {
   // Interfaz para la respuesta de añadir tarea
   interface AddTaskResponse {
     message: string; // Mensaje de respuesta del servidor
-    data: [{title: string; description: string}]; // Datos de la tarea añadida
+    data: string; // ID de la tarea añadida
   }
 
   // Función para manejar la adición de una tarea
