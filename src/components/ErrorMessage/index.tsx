@@ -15,7 +15,6 @@ const ErrorMessageComponent: FC<ErrorMessageComponentProps> = ({
 }) => {
   return (
     <View style={errorMessageStyle.container}>
-      {' '}
       {/* Contenedor para el mensaje de error */}
       <Text style={[errorMessageStyle.errorText, {textAlign: align}]}>
         {message} {/* Muestra el mensaje de error */}
